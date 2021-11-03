@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+//The beginning of navigation
+header {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    align-items: center;
+    // justify-content: center;
+    padding: 0 10rem;
+    
+    & > a {
+        text-decoration: none;
+    }
+}
+
+li > a {
+    text-decoration: none;
+}
+
+nav {
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: none;
+
+    & > li {
+        display: inline-block;
+
+        & > a {
+            padding: 0 1rem;
+        }
+    }
+}
+
+.profile {
+    width: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+}
+
+//The end of navigation
+
+//The start of the product images, description, and purchasing power
+.container {
+    display: flex;
+}
+
+//The end of the product images, description, and purchasing power
+
+@media (min-width: 990px) {
+
+    .nav-links {
+        display: block;
+    }
+}
