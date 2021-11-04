@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
+//Primary colors
+$orange: hsl(26, 100%, 55%); 
+$pale-orange: hsl(25, 100%, 94%);
+
+//Neutral colors
+$very-dark-blue: hsl(220, 13%, 13%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-grayish-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+//with 75% opacity for lightbox background
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -9,14 +22,35 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+p {
+    color: $dark-grayish-blue;
+}
+
 //The beginning of navigation
+// .hamburger {
+
+// }
+
+.line-1 {
+    background-color: $black;
+    height: 3px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: black;
+
+}
+
 header {
     display: flex;
     width: 100%;
     height: 6rem;
     align-items: center;
-    // justify-content: center;
-    padding: 0 10rem;
+    padding: 0 3rem;
     
     & > a {
         text-decoration: none;
@@ -45,15 +79,15 @@ nav {
 }
 
 .profile {
-    width: 6.5rem;
+    width: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
-.profile-pic {
-    width: 40px;
-    height: 40px;
+    &-pic {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 //The end of navigation
@@ -61,13 +95,125 @@ nav {
 //The start of the product images, description, and purchasing power
 .container {
     display: flex;
+    flex-direction: column;
+}
+
+.product-images {
+
+     & > img {
+         width: 100%;
+     }
+}
+
+.product-info {
+    padding: 1rem 1.5rem;
+
+    & > h1 {
+        margin: 1rem auto;
+    }
+
+    & > p {
+        margin: 1.5rem auto;
+    }
+}
+
+.sub-header {
+    text-transform: uppercase;
+    color: $orange;
+    font-size: 12px;
+    letter-spacing: 1.1px;
+}
+
+.cross-out {
+    color: $grayish-blue;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 10rem;
+
+        & > p {
+            display: flex;
+            color: $orange;
+            font-weight: bold;
+            background-color: $pale-orange;
+            text-align: center;
+            border-radius: 5px;
+            width: 3rem;
+            height: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.quantity {
+    display: flex;
+    background-color: $light-grayish-blue;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 18px;
+    height: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    & > button {
+        border: none;
+        background-color: transparent;
+        font-weight: 700;
+        font-size: 18px;
+        color: $orange;
+    }
+}
+
+.cart-btn {
+    display: flex;
+    margin-top: 1rem;
+    border: none;
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 8px;
+    background-color: $orange;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+
+    & > img {
+        color: $white;
+        margin-right: 5px;
+    }
 }
 
 //The end of the product images, description, and purchasing power
 
 @media (min-width: 990px) {
 
+    header {
+        padding: 0 10rem;
+    }
+
     .nav-links {
         display: block;
+    }
+
+    .profile {
+        width: 6.5rem;
+
+        &-pic {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
