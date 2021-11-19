@@ -98,12 +98,12 @@ li > a {
 
 .menu-btn.open .menu-btn-hamburger::before {
     transform: rotate(45deg) translate(35px, -35px);
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .menu-btn.open .menu-btn-hamburger::after {
     transform: rotate(-45deg) translate(35px, 35px);
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 //END OF HAMBURGER
 
@@ -172,6 +172,30 @@ li > a {
 .container {
     display: flex;
     flex-direction: column;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prevBtn, .nextBtn{
+    border: none;
+    border-radius: 25%;
+    padding: .75rem;
+    font-weight: bold;
+    background-color: #fff;
+    transform: translateY(500%);
+}
+
+.prevBtn {
+    margin-left: 1.25rem;
+}
+
+.nextBtn {
+    margin-right: 1.25rem;
 }
 
 .product-image {
