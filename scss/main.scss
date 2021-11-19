@@ -169,25 +169,43 @@ li > a {
 //START OF OVERLAY MENU @ MOBILE VIEW
 
 //The start of the product images, description, and purchasing power
-.container {
-    display: flex;
-    flex-direction: column;
-}
+// .container {
+//     display: flex;
+//     flex-direction: column;
+// }
 
-.carousel {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
+.container .carousel {
+    position: relative;
 
-.prevBtn, .nextBtn{
-    border: none;
-    border-radius: 25%;
-    padding: .75rem;
-    font-weight: bold;
-    background-color: #fff;
-    transform: translateY(500%);
+    & > .carousel-item > img {
+        width: 100%;
+    }
+
+     & > .carousel-item, & > .carousel-item-hidden {
+        display: none;
+    }
+
+    & > .carousel-item-visible {
+        display: block;
+    }
+
+    & > .carousel-actions {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-500%);
+
+        & > .prevBtn, & > .nextBtn {
+            border: none;
+            border-radius: 50%;
+            padding: 1rem 1.15rem;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
 }
 
 .prevBtn {
@@ -198,16 +216,9 @@ li > a {
     margin-right: 1.25rem;
 }
 
-.product-image {
-
-     & > img {
-         width: 100%;
-     }
-
-     &-thumbnails {
-         display: none;
-     }
-}
+    .product-image-thumbnails {
+        display: none;
+    }
 
 .product-info {
     padding: 1rem 1.5rem;
@@ -278,6 +289,7 @@ li > a {
         font-weight: 700;
         font-size: 18px;
         color: $orange;
+        cursor: pointer;
     }
 }
 
@@ -296,6 +308,7 @@ li > a {
     justify-content: center;
     margin-bottom: 5rem;
     box-shadow: 0 30px 30px rgba($orange, 0.2);
+    cursor: pointer;
 
     & > img {
         color: $white;
@@ -334,8 +347,4 @@ li > a {
     .nav-links {
         display: block;
     }
-
-    // .product-image-thumbnails {
-    //     display: block;
-    // }
 }

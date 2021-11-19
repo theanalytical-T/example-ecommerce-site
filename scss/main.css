@@ -172,35 +172,38 @@ li > a {
           flex-direction: column;
 }
 
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.container .carousel {
+  position: relative;
 }
-
-.carousel {
-  position: absolute;
+.container .carousel > .carousel-item > img {
   width: 100%;
+}
+.container .carousel > .carousel-item, .container .carousel > .carousel-item-hidden {
+  display: none;
+}
+.container .carousel > .carousel-item-visible {
+  display: block;
+}
+.container .carousel > .carousel-actions {
+  width: 100%;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: translateY(-500%);
+          transform: translateY(-500%);
 }
-
-.prevBtn, .nextBtn {
+.container .carousel > .carousel-actions > .prevBtn, .container .carousel > .carousel-actions > .nextBtn {
   border: none;
-  border-radius: 25%;
-  padding: 0.75rem;
+  border-radius: 50%;
+  padding: 1rem 1.15rem;
+  font-size: 20px;
   font-weight: bold;
   background-color: #fff;
-  -webkit-transform: translateY(500%);
-          transform: translateY(500%);
+  cursor: pointer;
 }
 
 .prevBtn {
@@ -211,9 +214,6 @@ li > a {
   margin-right: 1.25rem;
 }
 
-.product-image > img {
-  width: 100%;
-}
 .product-image-thumbnails {
   display: none;
 }
@@ -307,6 +307,7 @@ li > a {
   font-weight: 700;
   font-size: 18px;
   color: #ff7d1a;
+  cursor: pointer;
 }
 
 .cart-btn {
@@ -331,6 +332,7 @@ li > a {
   margin-bottom: 5rem;
   -webkit-box-shadow: 0 30px 30px rgba(255, 125, 26, 0.2);
           box-shadow: 0 30px 30px rgba(255, 125, 26, 0.2);
+  cursor: pointer;
 }
 .cart-btn > img {
   color: white;
