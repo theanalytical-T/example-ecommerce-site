@@ -371,5 +371,9 @@ li > a {
   .nav-links {
     display: block;
   }
+
+  .carousel-item img {
+    border-radius: 15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
