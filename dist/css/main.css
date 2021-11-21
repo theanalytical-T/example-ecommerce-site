@@ -361,6 +361,30 @@ li > a {
   height: 16px;
 }
 
+.product-thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-thumbnails-image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.product-thumbnails-image-visible {
+  border: 2px solid #ff7d1a;
+  border-radius: 10px;
+}
+
+.product-thumbnails-image > img {
+  border-radius: 10px;
+}
+
 @media (min-width: 1040px) {
   header {
     padding: 0 9rem;

@@ -168,12 +168,7 @@ li > a {
 }
 //START OF OVERLAY MENU @ MOBILE VIEW
 
-//The start of the product images, description, and purchasing power
-// .container {
-//     display: flex;
-//     flex-direction: column;
-// }
-
+//START OF PRODUCT IMAGES, DESCRIPTION, AND PURCHASES
 .container .carousel {
     position: relative;
 
@@ -318,7 +313,33 @@ li > a {
     }
 }
 
-//The end of the product images, description, and purchasing power
+.product-thumbnails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-thumbnails-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    &-visible {
+        border: 2px solid $orange;
+        border-radius: 10px;
+    }
+
+    & > img {
+        border-radius: 10px;
+        // border: 2px solid $orange;
+    }
+}
+
+// .product-thumbnails-image-visible {
+//     // border: 2px solid $orange;
+// }
+
+//END OF PRODUCT IMAGES, DESCRIPTION, AND PURCHASES
+
 
 @media (min-width: 1040px) {
 
